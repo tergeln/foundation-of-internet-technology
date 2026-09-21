@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Холбоо барих | Тэргэлийн вэб сайт</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-inner">
+      <p class="site-name">Тэргэлийн вэб сайт</p>
+      <nav aria-label="Үндсэн цэс">
+        <ul>
+          <li><a href="index.html">Нүүр</a></li>
+          <li><a href="about.html">Миний тухай</a></li>
+          <li><a href="interests.html">Миний сонирхол</a></li>
+          <li><a href="plans.html">Миний төлөвлөгөө</a></li>
+          <li><a href="contact.html" aria-current="page">Холбоо барих</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <h1>Холбоо барих</h1>
+
+    <section>
+      <h2>Холбоо барих мэдээлэл</h2>
+      <p>Асуулт, санал хүсэлт байвал доорх маягтаар эсвэл цахим шуудангаар бичээрэй.</p>
+      <ul>
+        <li>Цахим шуудан: <a href="mailto:example@example.com">tergeln26@gmail.com</a></li>
+        <li>Хариу өгөх хугацаа: 1-2 ажлын өдөр</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Санал хүсэлтийн маягт</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Зурвас илгээх</legend>
+
+          <div class="field">
+            <label for="name">Таны нэр</label>
+            <input type="text" id="name" name="name" placeholder="Нэрээ бичнэ үү" autocomplete="name" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Цахим шуудан</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+          </div>
+
+          <div class="field">
+            <label for="message">Зурвас</label>
+            <textarea id="message" name="message" placeholder="Санал хүсэлтээ энд бичнэ үү" minlength="10" maxlength="500" required></textarea>
+            <p class="hint">10-500 тэмдэгт.</p>
+          </div>
+
+          <button type="submit">Илгээх</button>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Тэргэл. Интернэт технологийн үндэс, Лаборатори 02.</p>
+  </footer>
+
+</body>
+</html>
