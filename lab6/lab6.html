@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Lumen – Phones, Laptops, Watches and Audio | Flexbox Homepage</title>
+    <title>Lumen Phones, Laptops and Watches</title>
 
     <!-- SEO: хайлтын системд зориулсан мэдээлэл -->
     <meta name="description" content="Lumen homepage: explore Lumen Phone 7, Lumen Book Air, Watch, Tab Pro and Buds. A responsive student web page built with CSS flexbox.">
@@ -21,6 +21,7 @@
     <meta name="twitter:card" content="summary">
 
     <!-- Favicon -->
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%231d1d1f'/%3E%3C/svg%3E">
 
     <!-- Бүтэцлэгдсэн өгөгдөл (Structured data) -->
@@ -32,16 +33,12 @@
 </head>
 <body>
 
-    <!-- =====================================================
-         1. Дээд цэс: лого | холбоосууд | хайлт, сагс
-         display:flex + justify-content:space-between
-         ===================================================== -->
+    <!-- 1. Дээд цэс: лого | холбоосууд | хайлт, сагс display:flex + justify-content:space-between-->
     <header class="global-nav">
         <nav class="nav-inner">
-            <a class="nav-logo" href="#" aria-label="Lumen home">
+            <a class="nav-logo" href="../index.html" aria-label="Lumen home">
                 <span class="logo-mark"></span>
             </a>
-
             <!-- Гар утсан дээр нуугдаж, ☰ товчоор нээгдэнэ -->
             <input type="checkbox" id="menu-toggle" class="menu-toggle">
             <ul class="nav-links">
@@ -70,8 +67,6 @@
             </div>
         </nav>
     </header>
-
-    <!-- Нимгэн мэдээллийн мөр -->
     <div class="ribbon">
         <p>Get up to $200 off a new phone when you trade in an eligible device. <a href="#">Shop now ›</a></p>
     </div>
@@ -79,11 +74,7 @@
     <main>
         <h1 class="sr-only">Lumen: phones, laptops, watches, tablets and audio</h1>
 
-
-        <!-- =====================================================
-             2. Том hero хэсгүүд: flex-direction:column,
-                align-items:center -> бүх зүйл голдоо
-             ===================================================== -->
+        <!-- 2. Том hero хэсгүүд: flex-direction:column,align-items:center -> бүх зүйл голдоо -->
         <section class="hero hero-light">
             <div class="hero-copy">
                 <h2>Lumen Phone 7</h2>
@@ -117,9 +108,7 @@
             </div>
         </section>
 
-        <!-- =====================================================
-             3. Жижиг хавтангууд: flex-wrap:wrap -> мөр бүрт 2
-             ===================================================== -->
+        <!-- 3. Жижиг хавтангууд: flex-wrap:wrap -> мөр бүрт 2 -->
         <section class="tiles">
 
             <article class="tile tile-grey">
@@ -185,9 +174,16 @@
 
         </section>
 
-        <!-- =====================================================
-             4. Хэвтээ гүйдэг карт: flex + overflow-x:auto
-             ===================================================== -->
+        <!--  4. Хэвтээ гүйдэг карт: flex + overflow-x:auto -->
+        <!-- Тайлбар хэсэг: хуудасны текстийг нэмэгдүүлнэ -->
+        <section class="about">
+            <h2>Phones, laptops and watches made for every day</h2>
+            <p>Lumen designs phones, laptops, watches, tablets and audio products that work together. Every Lumen phone, laptop and watch shares one account, so your photos, notes and messages follow you from one screen to the next.</p>
+            <p>The new Lumen Phone 7 is thinner and brighter, with a battery that lasts all day. Lumen Book Air is a light laptop for students and creators, and Lumen Watch keeps track of your health, sleep and workouts.</p>
+            <p>Want to save money? Trade in your old phone, laptop or watch and get credit toward a new Lumen device. You can also pay monthly with Lumen Card and get 3% back on every purchase.</p>
+            <p>This homepage is a student project built with HTML and CSS flexbox. The layout follows the structure of a large technology store homepage: a navigation bar, large product banners, a grid of product tiles, a scrolling row of shows and a detailed footer.</p>
+        </section>
+
         <section class="stream">
             <h2 class="stream-title">Now streaming on Lumen TV</h2>
             <div class="stream-row">
@@ -201,12 +197,26 @@
 
     </main>
 
-    <!-- =====================================================
-         5. Хөл хэсэг: багана бүр flex, wrap хийгдэнэ
-         ===================================================== -->
+    <!--  5. Хөл хэсэг: багана бүр flex, wrap хийгдэнэ -->
     <footer class="footer">
         <div class="footer-inner">
-            <p class="footnote">1. Trade-in values vary by device condition and model. This page is a student layout exercise; "Lumen" and all products here are fictional.</p>
+            <p class="footnote">1. Trade-in values vary by device condition and model. This page is a student layout exercise; "Lumen" and all products here are fictional. The layout was built after completing <a href="https://flexboxfroggy.com/" target="_blank" rel="noopener">Flexbox Froggy</a> and reading the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout" target="_blank" rel="noopener">MDN flexbox guide</a>. Source code on <a href="https://github.com/tergeln/foundation-of-internet-technology" target="_blank" rel="noopener">GitHub</a>.</p>
+
+            <!-- Бусад лабораторийн ажлууд (дотоод холбоос) -->
+            <p class="other-labs">More lab works:
+                <a href="../index.html">All labs</a>
+                <a href="../lab2/lab2.html">Lab 2</a>
+                <a href="../lab3/lab3.html">Lab 3</a>
+                <a href="../lab8/lab8.html">Lab 8</a>
+                <a href="../lab9/lab9.html">Lab 9</a>
+                <a href="../lab10/index.html">Lab 10</a>
+            </p>
+
+            <!-- Хуваалцах -->
+            <p class="share">Share this page:
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftergeln.github.io%2Ffoundation-of-internet-technology%2Flab6%2Flab6.html" target="_blank" rel="noopener">Facebook</a>
+                <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ftergeln.github.io%2Ffoundation-of-internet-technology%2Flab6%2Flab6.html" target="_blank" rel="noopener">X (Twitter)</a>
+            </p>
 
             <div class="directory">
                 <div class="dir-col">
@@ -238,7 +248,7 @@
             <div class="legal">
                 <p>Copyright © 2026 Lumen Inc. All rights reserved.</p>
                 <div class="legal-links">
-                    <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sales Policy</a><a href="#">Site Map</a>
+                    <a href="#">Privacy Policy</a><a href="#">Terms of Use</a><a href="#">Sales Policy</a><a href="../sitemap.xml">Site Map</a>
                 </div>
                 <p class="region">Mongolia</p>
             </div>
