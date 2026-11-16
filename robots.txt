@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tergeln.github.io/foundation-of-internet-technology/sitemap.xml
