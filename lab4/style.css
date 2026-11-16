@@ -1,0 +1,401 @@
+/* =========================================================
+   Lab 4 - Style guide-ийн өнгө, фонт
+   ========================================================= */
+:root {
+    --navy-dark: #13124F;   /* jumbotron, panel, footer */
+    --navy:      #1B1B6C;   /* navbar, input */
+    --indigo:    #352BA5;   /* panel footer, badge */
+    --pink:      #F61067;   /* үндсэн товч */
+    --green:     #2AD392;   /* "Lame" товч, progress */
+    --grey:      #9090A5;   /* alert, panel heading */
+
+    --text: #222222;
+    --border: #e5e5e5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text);
+    background: #ffffff;
+}
+
+/* Агуулгыг голлуулж, хоёр талаас зай авна */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+/* Зөвхөн screen reader-т харагдах текст */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+}
+
+/* ---------------- Navbar ---------------- */
+.navbar {
+    background: var(--navy);
+    padding: 12px 0;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.brand-icon {
+    width: 26px;
+    height: 26px;
+}
+
+/* ---------------- Jumbotron ---------------- */
+.jumbotron {
+    background: var(--navy-dark);
+    color: #ffffff;
+    padding: 70px 0 65px;
+}
+
+.jumbotron h1 {
+    margin: 0;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+.lead {
+    margin: 12px 0 28px;
+    font-size: 19px;
+}
+
+/* ---------------- Товчнууд ---------------- */
+.btn {
+    display: inline-block;
+    padding: 10px 14px;
+    border: 2px solid transparent;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--pink);
+    border-color: var(--pink);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #d80d5a;
+    border-color: #d80d5a;
+}
+
+.btn-outline {
+    background: #ffffff;
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.btn-outline:hover {
+    background: var(--green);
+    color: #ffffff;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* ---------------- Үндсэн агуулга: 2 багана ---------------- */
+.content {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+.main-column {
+    flex: 2;          /* зүүн багана 2 хувь */
+    min-width: 0;
+}
+
+.sidebar {
+    flex: 1;          /* баруун багана 1 хувь */
+    min-width: 0;
+}
+
+.page-heading {
+    margin: 12px 0 20px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* Видеог 16:9 харьцаатайгаар дэлгэцэнд тааруулна */
+.video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    margin: 36px 0 34px;
+    background: #000000;
+}
+
+.video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.alert {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    background: var(--grey);
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.alert-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--grey);
+    font-size: 12px;
+    line-height: 1;
+}
+
+/* ---------------- Sidebar ---------------- */
+.messages {
+    margin-bottom: 22px;
+}
+
+.badge {
+    display: inline-block;
+    min-width: 20px;
+    margin-left: 4px;
+    padding: 2px 6px;
+    border-radius: 10px;
+    background: var(--indigo);
+    color: #ffffff;
+    font-size: 12px;
+}
+
+.panel {
+    margin-bottom: 22px;
+    background: var(--navy-dark);
+    color: #ffffff;
+}
+
+.panel-heading {
+    margin: 0;
+    padding: 12px 16px;
+    background: var(--grey);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.panel-body {
+    padding: 16px;
+    font-weight: 700;
+}
+
+.panel-body p {
+    margin: 0 0 14px;
+}
+
+.panel-body em {
+    font-weight: 400;
+}
+
+.input {
+    display: block;
+    width: 100%;
+    margin-bottom: 14px;
+    padding: 8px 12px;
+    border: 0;
+    border-top: 2px solid var(--grey);
+    border-bottom: 2px solid var(--grey);
+    background: var(--navy);
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.input::placeholder {
+    color: #b9b9cc;
+}
+
+.panel-footer {
+    padding: 10px 16px;
+    background: var(--indigo);
+    text-align: center;
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.panel-footer a {
+    color: #ffffff;
+}
+
+.card {
+    padding: 16px;
+    border: 2px solid var(--border);
+    font-weight: 700;
+}
+
+.card p {
+    margin: 0 0 12px;
+}
+
+.progress {
+    display: flex;
+    height: 8px;
+    margin-bottom: 20px;
+}
+
+.bar-cool {
+    background: var(--pink);
+}
+
+.bar-lame {
+    background: var(--green);
+}
+
+.vote-buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.vote-buttons .btn {
+    flex: 1;
+}
+
+/* ---------------- Footer ---------------- */
+.footer {
+    background: var(--navy-dark);
+    color: #ffffff;
+    padding: 16px 0;
+    font-weight: 700;
+}
+
+/* =========================================================
+   Responsive - @media query
+   Компьютер: 992px-ээс дээш  -> дээрх үндсэн загвар (2 багана)
+   Таблет:    768px - 991px   -> sidebar доошоо бууж, 2 хэсэг зэрэгцэнэ
+   Гар утас:  767px-ээс доош  -> бүгд нэг багана
+   ========================================================= */
+
+/* Таблет */
+@media (max-width: 991px) {
+    .container {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .jumbotron {
+        padding: 55px 0 50px;
+    }
+
+    .jumbotron h1 {
+        font-size: 52px;
+    }
+
+    .content {
+        flex-direction: column;   /* sidebar нийтлэлийн доор */
+        align-items: stretch;
+    }
+
+    .sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;   /* panel ба card зэрэгцэнэ */
+        gap: 22px;
+        align-items: start;
+    }
+
+    .messages {
+        grid-column: 1 / -1;   /* Messages товч бүтэн өргөнөөр */
+        margin-bottom: 0;
+    }
+
+    .panel {
+        margin-bottom: 0;
+    }
+}
+
+/* Гар утас */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .container {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .jumbotron {
+        padding: 40px 0;
+    }
+
+    .jumbotron h1 {
+        font-size: 38px;
+    }
+
+    .lead {
+        font-size: 16px;
+    }
+
+    .content {
+        padding-top: 24px;
+        gap: 24px;
+    }
+
+    .page-heading {
+        font-size: 26px;
+        padding-bottom: 12px;
+    }
+
+    .video {
+        margin: 24px 0;
+    }
+
+    .sidebar {
+        grid-template-columns: 1fr;   /* нэг багана */
+    }
+
+    .footer {
+        text-align: center;
+    }
+}
