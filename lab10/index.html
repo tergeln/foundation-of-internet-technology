@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 10</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="logo.png" alt="ikon logo"></a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">ЭХЛЭЛ</a></li>
+            <li><a href="#">УЛС ТӨР</a></li>
+            <li><a href="#">ЭДИЙН ЗАСАГ</a></li>
+            <li><a href="#">НИЙГЭМ</a></li>
+            <li><a href="#">ЭРҮҮЛ МЭНД</a></li>
+            <li><a href="#">ДЭЛХИЙ</a></li>
+            <li><a href="#">СПОРТ</a></li>
+            <li><a href="#">ТЕХНОЛОГИ</a></li>
+            <li><a href="#">БУСАД</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="news-list">
+            <p class="loading">Ачаалж байна...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Мэдээ блог · Эх сурвалж: ikon.mn</p>
+    </footer>
+
+    <script src="news.js"></script>
+    <script>
+        loadNews(function (news) {
+            var list = document.getElementById("news-list");
+
+            if (news.length == 0) {
+                list.innerHTML = "<p class='loading'>Мэдээ ачаалж чадсангүй.</p>";
+                return;
+            }
+
+            var html = "";
+            for (var i = 0; i < news.length; i++) {
+                var text = getText(news[i].description);
+                html += "<article class='news-item'>" +
+                            "<a href='details.html?id=" + i + "'>" +
+                                "<h2>" + news[i].title + "</h2>" +
+                                "<span class='date'>" + formatDate(news[i].date) + "</span>" +
+                                "<p>" + text.substring(0, 160) + "...</p>" +
+                            "</a>" +
+                        "</article>";
+            }
+            list.innerHTML = html;
+        });
+    </script>
+</body>
+</html>

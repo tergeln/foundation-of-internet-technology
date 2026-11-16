@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мэдээний дэлгэрэнгүй</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo"><img src="logo.png" alt="ikon logo"></a>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">ЭХЛЭЛ</a></li>
+            <li><a href="#">УЛС ТӨР</a></li>
+            <li><a href="#">ЭДИЙН ЗАСАГ</a></li>
+            <li><a href="#">НИЙГЭМ</a></li>
+            <li><a href="#">ЭРҮҮЛ МЭНД</a></li>
+            <li><a href="#">ДЭЛХИЙ</a></li>
+            <li><a href="#">СПОРТ</a></li>
+            <li><a href="#">ТЕХНОЛОГИ</a></li>
+            <li><a href="#">БУСАД</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article id="details">
+            <p class="loading">Ачаалж байна...</p>
+        </article>
+        <a href="index.html" class="back">Буцах</a>
+    </main>
+
+    <footer>
+        <p>© 2026 Мэдээ блог · Эх сурвалж: ikon.mn</p>
+    </footer>
+
+    <script src="news.js"></script>
+    <script>
+        // details.html?id=3 -> 3
+        var id = new URLSearchParams(window.location.search).get("id");
+
+        loadNews(function (news) {
+            var box = document.getElementById("details");
+            var item = news[id];
+
+            if (!item) {
+                box.innerHTML = "<p class='loading'>Мэдээ олдсонгүй.</p>";
+                return;
+            }
+
+            document.title = item.title;
+
+            // Агуулгыг оруулаад script-ийг хасаж, зургийг харагддаг болгоно
+            var content = document.createElement("div");
+            content.className = "content";
+            content.innerHTML = item.description;
+            content.querySelectorAll("script, .thumb, .ikonarsave").forEach(function (el) {
+                el.remove();
+            });
+            content.querySelectorAll("img[data-src]").forEach(function (img) {
+                img.src = img.getAttribute("data-src");
+            });
+
+            box.innerHTML = "<h2>" + item.title + "</h2>" +
+                            "<p class='date'>" + formatDate(item.date) + "</p>";
+            box.appendChild(content);
+        });
+    </script>
+</body>
+</html>

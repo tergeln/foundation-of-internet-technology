@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Толгой хэсэг */
+header {
+    background-color: #f8f8f8;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo img {
+    height: 40px;
+    vertical-align: middle;
+}
+
+/* Цэс */
+nav {
+    background-color: #f8f8f8;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav li a {
+    display: block;
+    padding: 10px 10px;
+    font-size: 16px;
+}
+
+nav li a:hover {
+    color: #ee4523;
+}
+
+/* Үндсэн хэсэг */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.loading {
+    text-align: center;
+    color: #777;
+}
+
+/* Мэдээний жагсаалт */
+.news-item {
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.news-item:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h2 {
+    font-size: 20px;
+    margin: 0 0 8px 0;
+}
+
+.news-item:hover h2 {
+    color: #ee4523;
+}
+
+.date {
+    display: block;
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.news-item p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Дэлгэрэнгүй хуудас */
+#details h2 {
+    font-size: 26px;
+    margin-top: 0;
+}
+
+#details .date {
+    font-size: 16px;
+    color: #000;
+}
+
+.content {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.content img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+
+.content iframe {
+    max-width: 100%;
+}
+
+.ikcaption {
+    text-align: center;
+    font-size: 13px;
+    color: #777;
+}
+
+.back {
+    display: inline-block;
+    margin-top: 10px;
+    color: blue;
+    text-decoration: underline;
+}
+
+/* Хөл хэсэг */
+footer {
+    background-color: #3b3f51;
+    color: #bbb;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+/* Гар утас, таблет */
+@media (max-width: 768px) {
+    nav li a {
+        padding: 8px 6px;
+        font-size: 13px;
+    }
+
+    main {
+        padding: 25px 12px;
+    }
+
+    .news-item h2 {
+        font-size: 17px;
+    }
+
+    #details h2 {
+        font-size: 21px;
+    }
+}
