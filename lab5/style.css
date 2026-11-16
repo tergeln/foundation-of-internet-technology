@@ -1,6 +1,4 @@
-/* =========================================================
-   Lab 4 - Style guide-ийн өнгө, фонт
-   ========================================================= */
+
 :root {
     --navy-dark: #13124F;   /* jumbotron, panel, footer */
     --navy:      #1B1B6C;   /* navbar, input */
@@ -46,7 +44,7 @@ body {
     white-space: nowrap;
 }
 
-/* ---------------- Navbar ---------------- */
+/*  Navbar  */
 .navbar {
     background: var(--navy);
     padding: 12px 0;
@@ -67,7 +65,7 @@ body {
     height: 26px;
 }
 
-/* ---------------- Jumbotron ---------------- */
+/*  Jumbotron  */
 .jumbotron {
     background: var(--navy-dark);
     color: #ffffff;
@@ -86,7 +84,7 @@ body {
     font-size: 19px;
 }
 
-/* ---------------- Товчнууд ---------------- */
+/*  Товчнууд  */
 .btn {
     display: inline-block;
     padding: 10px 14px;
@@ -127,7 +125,7 @@ body {
     width: 100%;
 }
 
-/* ---------------- Үндсэн агуулга: 2 багана ---------------- */
+/*  Үндсэн агуулга: 2 багана  */
 .content {
     display: flex;
     align-items: flex-start;
@@ -196,7 +194,7 @@ body {
     line-height: 1;
 }
 
-/* ---------------- Sidebar ---------------- */
+/*  Sidebar  */
 .messages {
     margin-bottom: 22px;
 }
@@ -302,7 +300,7 @@ body {
     flex: 1;
 }
 
-/* ---------------- Footer ---------------- */
+/*  Footer  */
 .footer {
     background: var(--navy-dark);
     color: #ffffff;
@@ -310,12 +308,6 @@ body {
     font-weight: 700;
 }
 
-/* =========================================================
-   Responsive - @media query
-   Компьютер: 992px-ээс дээш  -> дээрх үндсэн загвар (2 багана)
-   Таблет:    768px - 991px   -> sidebar доошоо бууж, 2 хэсэг зэрэгцэнэ
-   Гар утас:  767px-ээс доош  -> бүгд нэг багана
-   ========================================================= */
 
 /* Таблет */
 @media (max-width: 991px) {

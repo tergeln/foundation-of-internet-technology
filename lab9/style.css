@@ -71,7 +71,7 @@ body {
     text-align: center;
 }
 
-/* ---------------- Дүрс ---------------- */
+/*  Дүрс  */
 .figure {
     width: 100%;
     max-width: 260px;
@@ -109,7 +109,7 @@ body {
     color: var(--bad);
 }
 
-/* ---------------- Асуулт, үг ---------------- */
+/*  Асуулт, үг  */
 .label {
     margin: 0;
     color: var(--muted);
@@ -166,7 +166,7 @@ body {
 .message.bad  { color: var(--bad); }
 .message.info { color: var(--info); }
 
-/* ---------------- Үсгийн товчнууд ---------------- */
+/* Үсгийн товчнууд  */
 .keyboard {
     display: flex;
     flex-wrap: wrap;
@@ -212,7 +212,7 @@ body {
 
 .restart:hover { background: #7dd3fc; }
 
-/* ---------------- Үр дүнгийн цонх ---------------- */
+/* Үр дүнгийн цонх  */
 .result {
     position: fixed;
     inset: 0;
@@ -241,9 +241,6 @@ body {
 .result-box p { margin: 0 0 24px; font-size: 18px; color: var(--muted); }
 .result-box strong { color: var(--text); letter-spacing: 0.08em; }
 
-/* =========================================================
-   Responsive
-   ========================================================= */
 
 /* Таблет: дүрс дээр, тоглоом доор */
 @media (max-width: 860px) {
